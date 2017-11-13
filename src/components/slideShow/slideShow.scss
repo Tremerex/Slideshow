@@ -1,0 +1,17 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+div.container {
+    background: #F9F9F9;
+    margin: 0 auto;
+    padding: 3%;
+    position: relative;
+    width: 75%;
+}

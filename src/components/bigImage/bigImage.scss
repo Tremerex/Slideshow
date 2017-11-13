@@ -1,0 +1,107 @@
+div.bigImage {
+    border: 2px solid #3f3f3f;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: 60%;
+    
+    & > div.imageContainer {
+        height: 100%;
+        width: 100%;
+        
+        & > div.image {
+            height: 100%;
+            width: 100%;
+        }
+
+        & > div:nth-child(2) {
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    }
+
+    &:hover > span.left {
+        left: 10px;
+    }
+
+    &:hover > span.right {
+        right: 10px;
+    }
+
+    &:hover > input.search {
+        top: 5%;
+    }
+
+    & > input.search {
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.75);
+        color: #777;
+        font-size: 100%;
+        height: 2rem;
+        left: 50%;
+        line-height: 2rem;
+        padding: 0px 10px;
+        position: absolute;
+        top: -10%;
+        transform: translateX(-50%);
+        transition: all .2s ease-in;
+        width: 45%;
+    }
+
+    & > span.left, & span.right {
+        display: block;
+        cursor: pointer;
+        height: 60px;
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        
+        &:after {
+            border-bottom: 1px solid transparent;
+            border-left: 5px solid red;
+            border-right: 1px solid transparent;
+            border-top: 5px solid red;
+            content: '';
+            height: 36px;
+            position: absolute;
+            top: 50%;
+            width: 36px;
+        }
+
+    }
+
+    & > span.left {
+        left: -50px;
+        transition: left .5s ease;
+
+        &:after {
+            left: 50%;
+            transform: translate(-25%, -50%) rotate(315deg);
+        }
+
+    }
+
+    & > span.right {
+        right: -50px;
+        transition: right .5s ease;
+
+        &:after {
+            right: 50%;
+            transform: translate(25%, -50%) rotate(135deg);
+        }
+
+    }
+
+    & .hide {
+        display: none!important;
+    }
+
+}
