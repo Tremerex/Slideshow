@@ -1,7 +1,7 @@
 /*global browser*/
 
 export default class Main {
-    constructor(url) {
-        browser.url(url);
-    }
+  constructor(url) {
+    browser.url(url);
+  }
 }

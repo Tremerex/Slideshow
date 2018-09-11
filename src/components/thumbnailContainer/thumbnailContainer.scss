@@ -1,8 +1,10 @@
+@import "../../global/css/variables.scss";
+
 div.thumbnailList {
-    background: #F9F9F9;
-    border: 2px solid #3f3f3f;
+    background: $alabaster;
+    border: 2px solid $mine-shaft;
     border-radius: 10px;
-    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 5px 5px 10px 0px $black-alpha-75;
     display: flex;
     margin: -10px auto 0 auto;
     min-height: 184px;
@@ -18,14 +20,14 @@ div.thumbnailList {
         transform: translateX(-50%);
 
         & li {
-            background-color: #4d4d4d;
+            background-color: $tundora;
             display: inline-block;
             height: 2px;
             margin-left: 1px;
             width: 12px;
 
             &.active {
-                background-color: #a22;
+                background-color: $mexican-red;
             }
 
         }

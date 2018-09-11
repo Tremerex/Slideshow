@@ -1,38 +1,40 @@
+@import "../../global/css/variables.scss";
+
 div.thumbnail {
-    border: 1px solid black;
-    box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.75);
-    cursor: pointer;
-    flex: 0 0 auto;
-    left: 0;
-    margin: 20px 20px;
-    max-height: 140px;
-    position: relative;
-    right: 0;
-    transition: 1s;
+  border: 1px solid black;
+  box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.75);
+  cursor: pointer;
+  flex: 0 0 auto;
+  left: 0;
+  margin: 20px 20px;
+  max-height: 140px;
+  position: relative;
+  right: 0;
+  transition: 1s;
 
-    & > .thumbnailImage {
-        height: 140px;
+  & > .thumbnailImage {
+    height: 140px;
 
-        & > .title {
-            bottom: 10px;
-            font-family: tahoma;
-            font-size: 20px;
-            font-weight: bold;
-            position: absolute;
-            text-align: center;
-            visibility: hidden;
-            width: 100%;
-        }
-
-        &.active {
-            border: 2px solid black;
-            box-shadow: 2px 2px 5px 4px rgba(0,0,0,0.75);
-        }
-
-        &:hover .title {
-            visibility: visible;
-        }
-
+    & > .title {
+      bottom: 10px;
+      font-family: tahoma;
+      font-size: 20px;
+      font-weight: bold;
+      position: absolute;
+      text-align: center;
+      visibility: hidden;
+      width: 100%;
     }
+
+    &.active {
+      border: 2px solid black;
+      box-shadow: 2px 2px 5px 4px rgba(0,0,0,0.75);
+    }
+
+    &:hover .title {
+      visibility: visible;
+    }
+
+  }
 
 }

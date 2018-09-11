@@ -1,27 +1,13 @@
 import webpack from 'webpack';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import path from 'path';
 import UglifyJSPlugin from 'uglifyjs-webpack-plugin';
+import webpackMerge from 'webpack-merge';
+import webpackBaseConfig from './webpack.config.base.babel';
+import config from '../config';
 
-export default {
-  entry: {
-    app: path.resolve('src'),
-    vendor: ['react', 'react-dom', 'redux', 'react-redux', 'redux-thunk', 'axios', 'prop-types']
-  }
-  ,
-  output: {
-    filename: 'app.bundle.js',
-    path: path.resolve('public/scripts'),
-    sourceMapFilename: '[file].map'
-  },
-  devtool: 'source-map',
+export default webpackMerge(webpackBaseConfig, {
   module: {
     rules: [
-      {
-        test: /\.(js|jsx)$/,
-        use: ['babel-loader'],
-        exclude: /node_modules/
-      },
       {
         test: /\.css$/,
           exclude: /node_modules/,
@@ -32,7 +18,7 @@ export default {
             ]
           })
       },
-      { 
+      {
         test: /\.scss$/,
         exclude: /node_modules/,
         use: ExtractTextPlugin.extract({
@@ -48,16 +34,14 @@ export default {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify('production')
+        NODE_ENV: process.env.NODE_ENV
       }
     }),
-    new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.bundle.js' }),
     new ExtractTextPlugin({
-      filename: getPath => getPath('../styles/css.bundle.css'),
-      allChunks: true
+      filename: getPath => getPath(config.cssFilePath)
     }),
     new UglifyJSPlugin({
       sourceMap: true
     })
   ]
-};
+});

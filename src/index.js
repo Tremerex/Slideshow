@@ -7,16 +7,16 @@ import thunk from 'redux-thunk';
 import App from './components/app';
 import reducer from './reducers';
 
-let store = createStore(reducer, 
-    compose(
-        applyMiddleware(thunk),
-        window.devToolsExtension ? window.devToolsExtension() : f => f
-    )
+let store = createStore(reducer,
+  compose(
+    applyMiddleware(thunk),
+    window.devToolsExtension ? window.devToolsExtension() : f => f
+  )
 );
 
 render(
-    <Provider store={store}>
-        <App />
-    </Provider>,
-    document.getElementById('mainContainer')
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('mainContainer')
 );
