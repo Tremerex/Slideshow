@@ -13,10 +13,10 @@ yarn start
 
 ## To Run Test Cases (e2e)
 
-```bash
-### Prerequisites
-[Java SE Runtime Environment](http://www.oracle.com/technetwork/java/javase/jre8-downloads-2133155.html)
-```
+# --- Prerequisites ---
+
+ [Java](http://www.oracle.com/technetwork/java/javase/jre8-downloads-2133155.html)
+
 
 ```bash
 # --- In command shell one ---
