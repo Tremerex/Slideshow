@@ -13,7 +13,7 @@ yarn start
 
 ## To Run Test Cases (e2e)
 
-###Prerequisites
+### Prerequisites
 
  * [Java](http://www.oracle.com/technetwork/java/javase/jre8-downloads-2133155.html)
 
