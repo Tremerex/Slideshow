@@ -33,8 +33,8 @@ class ThumbnailContainer extends Component {
 
   render() {
     const { photoList, photosPerPage, selectedIndex } = this.props;
-    const maxPages = ~~(photoList.length/photosPerPage) + 1;
-    const currentPage = ~~(selectedIndex/photosPerPage);
+    const maxPages = parseInt(photoList.length/photosPerPage, 10) + 1;
+    const currentPage = parseInt(selectedIndex/photosPerPage, 10);
     const translate = -((this.width - 44) * currentPage);
     let thumbnailStyle = {
       width: `calc(100% * (1 / ${photosPerPage}) - 40px)`,

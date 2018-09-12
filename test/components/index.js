@@ -1,1 +1,1 @@
-export { SlideShow } from './slideshow.class';
+export { SlideShow } from './slideshow.test';
